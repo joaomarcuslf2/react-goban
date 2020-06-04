@@ -15,7 +15,7 @@ Install the package: `npm install react-goban --save`
 Require it and use its `Goban` object:
 
 ```jsx
-<Goban stones={{"P16":"black","Q4":"white","D4":"black","E16":"white"}} 
+<Goban stones={{"P16":"black","Q4":"white","D4":"black","E16":"white"}}
        onIntersectionClick={handler}
 />
 ```
@@ -34,5 +34,4 @@ Require it and use its `Goban` object:
 
 ## Demo
 
-You may `make demo` and browse the bundled app at `demo\index.html`
-
+To run this demo, just download the project an run ```npm run start```
