@@ -1,23 +1,39 @@
 {
   "name": "react-goban",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
+  "version": "1.0.0",
+  "private": false,
+  "description": "A stateless React component displaying a Goban",
+  "author": "Martin D. <desgeeko@gmail.com>, Joao Marcus Fernandes <jmarcusfernandes@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "go",
+    "weiqi",
+    "baduk",
+    "goban",
+    "react",
+    "react-component",
+    "svgoban",
+    "svg"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix",
+    "publish:build": "NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/Goban --out-dir dist --copy-files"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "bugs": {
+    "url": "https://github.com/desgeeko/react-goban/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desgeeko/react-goban.git"
   },
   "browserslist": {
     "production": [
@@ -30,5 +46,29 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "react": "^16.13.1",
+    "svgoban": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
   }
 }
